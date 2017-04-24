@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: ldap
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: tka
+Built-By: Ringo
 Implementation-Vendor-Id: ldap
-Build-Jdk: 1.8.0_121
+Build-Jdk: 1.8.0_131
 Implementation-URL: http://projects.spring.io/spring-boot/ldap/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
