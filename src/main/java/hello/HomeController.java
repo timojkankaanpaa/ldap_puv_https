@@ -42,8 +42,8 @@ public class HomeController {
     	CloseableHttpClient client = HttpClients.createDefault();
     	HttpClientContext context = HttpClientContext.create();
     	
-    	String username = "Default User";
-    	String password = "robotics";
+    	String username = "";
+    	String password = "";
     	
     	/*encode nonce*/
 //    	String nonce = null;
@@ -61,8 +61,8 @@ public class HomeController {
     	credPro.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(username,password));
     	AuthCache authCache = new BasicAuthCache();
     	DigestScheme digestScheme = new DigestScheme();
-    	digestScheme.overrideParamter("realm", "validusers@robapi.abb");
-    	digestScheme.overrideParamter("algorithm","MD5");
+    	digestScheme.overrideParamter("realm", "");
+    	digestScheme.overrideParamter("algorithm","");
     	//digestScheme.overrideParamter("nonce", new String(Base64.encodeBase64(Long.toString(new Random().nextLong(), 92).getBytes())));
     	authCache.put(targetHost, digestScheme);
     	
