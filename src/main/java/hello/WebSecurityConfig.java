@@ -13,14 +13,10 @@ import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http
-			.authorizeRequests()
-				.anyRequest().fullyAuthenticated()
-				.and()
-			.formLogin();
-	}
+ 	@Override
+        protected void configure(HttpSecurity http) throws Exception {
+                http.csrf().disable().authorizeRequests().antMatchers("/", "/index").permitAll().anyRequest().authenticated()                                .and().httpBasic();
+        }
 
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
